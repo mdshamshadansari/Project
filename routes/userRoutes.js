@@ -8,6 +8,7 @@ const {
   handleCreateNewUser
 } = require("../controllers/userHandlers");
 
+
 //Creating route with commmon "/api/users"
 router
     .route('/')

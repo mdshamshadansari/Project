@@ -11,6 +11,7 @@ async function handleGetUserById(req, res) {
     return res.json(users);
 }
 
+
 async function handleUpdateUserById(req, res) {
     await user.findByIdAndUpdate(req.params.id, req.body);
     if(!user) return res.status(404).json({status: 'fail', message: 'User not found'});

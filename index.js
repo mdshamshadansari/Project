@@ -13,7 +13,6 @@ connectMongoDB("mongodb://localhost:27017/users");
 app.set('view engine', 'ejs');
 app.set('views', path.resolve('./views')); 
 
-
 //Middlewares
 app.use(express.urlencoded({ extended: false }));
 
