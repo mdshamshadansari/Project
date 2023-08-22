@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const PORT = 6010;
 const userRouter = require('./routes/userRoutes');
-const {connectMongoDB} = require('./services/connections');
+const { connectMongoDB } = require('./services/connections');
 const user = require('./models/userSchema');
 
 //Connections
@@ -15,10 +15,9 @@ app.set('views', path.resolve('./views'));
 
 //Middlewares
 app.use(express.urlencoded({ extended: false }));
-
-//Routes
 app.use('/api/users', userRouter);
 
+//Views Rendering
 app.get("/test", async (req, res) => {
     const allUsers = await user.find({});
     res.render("view", { 
