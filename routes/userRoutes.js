@@ -15,7 +15,6 @@ router
     .post(handleCreateNewUser);
   
 //Merging get, patch and delete bcox they have same route "/api/users/:id" 
-  
 router
     .route('/:id')
     .get(handleGetUserById)
