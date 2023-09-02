@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 6010;
+const PORT = 6000;
 const userRouter = require('./routes/userRoutes');
 const { connectMongoDB } = require('./services/connections');
 const user = require('./models/userSchema');
